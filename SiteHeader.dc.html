@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="background:#f7f3e9;border-bottom:1px solid #e4dccb;position:sticky;top:0;z-index:30">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 56px">
+    <div onClick="{{ goHome }}" style="cursor:pointer;display:flex;flex-direction:column;gap:2px;flex:none">
+      <div style="font:600 22px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.015em">Supritha Nalwad</div>
+      <div style="font:500 9.5px 'IBM Plex Sans',sans-serif;letter-spacing:.16em;color:#a07b2e">ONLINE MATHS TUTOR</div>
+    </div>
+    <div style="display:flex;gap:24px;align-items:center;justify-content:flex-end;flex-wrap:wrap;font:500 12.5px 'IBM Plex Sans',sans-serif;color:#4a5c57">
+      <span onClick="{{ goHome }}" style="{{ sHome }}">Home</span>
+      <span onClick="{{ goAbout }}" style="{{ sAbout }}">About</span>
+      <span onClick="{{ goCourses }}" style="{{ sCourses }}">Courses</span>
+      <span onClick="{{ goReviews }}" style="{{ sReviews }}">Reviews</span>
+      <span onClick="{{ goPricing }}" style="{{ sPricing }}">Pricing</span>
+      <span onClick="{{ goFaq }}" style="{{ sFaq }}">FAQ</span>
+      <span onClick="{{ goContact }}" style="{{ sContact }}">Contact</span>
+      <span onClick="{{ goContact }}" style="white-space:nowrap;flex:none;cursor:pointer;font-weight:600;color:#f7f3e9;background:#1d332f;padding:11px 18px;border-radius:2px">Book a Free Assessment</span>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:90},&quot;go&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(page: string) =&gt; void&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const go = this.props.go || (() => {});
+    const active = this.props.active;
+    const base = "white-space:nowrap;flex:none;cursor:pointer;padding-bottom:3px;border-bottom:1.5px solid transparent";
+    const on = "white-space:nowrap;flex:none;cursor:pointer;color:#1d332f;border-bottom:1.5px solid #a07b2e;padding-bottom:3px";
+    const s = (k) => (active === k ? on : base);
+    return {
+      sHome: s("home"), sAbout: s("about"), sCourses: s("courses"), sReviews: s("reviews"),
+      sPricing: s("pricing"), sFaq: s("faq"), sContact: s("contact"),
+      goHome: () => go("home"), goAbout: () => go("about"), goCourses: () => go("courses"),
+      goReviews: () => go("reviews"), goPricing: () => go("pricing"), goFaq: () => go("faq"),
+      goContact: () => go("contact")
+    };
+  }
+}
+
+</script>
+</body>
+</html>

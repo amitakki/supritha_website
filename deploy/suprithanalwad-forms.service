@@ -1,0 +1,19 @@
+[Unit]
+Description=Form handler for suprithanalwad.in
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/suprithanalwad.in/api
+ExecStart=/usr/bin/node form-api.js
+Restart=always
+Environment=PORT=3001
+Environment=MAIL_TO=hello@suprithanalwad.in
+Environment=SMTP_HOST=smtp.hostinger.com
+Environment=SMTP_PORT=465
+Environment=SMTP_USER=hello@suprithanalwad.in
+Environment=SMTP_PASS=CHANGE_ME
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><title>Supritha Nalwad · Online Maths Tutor — 11+, SATs, KS3 &amp; GCSE</title><meta name="description" content="One-to-one and small-group online maths tuition for UK, Australian and New Zealand families. 11+, SATs, KS2/KS3, GCSE and NAPLAN. Free thirty-minute assessment with an honest written summary."><link rel="canonical" href="https://suprithanalwad.in/"><meta name="theme-color" content="#1d332f"><meta property="og:type" content="website"><meta property="og:site_name" content="Supritha Nalwad"><meta property="og:title" content="Supritha Nalwad · Online Maths Tutor"><meta property="og:description" content="11+, SATs, KS3, GCSE and NAPLAN maths, taught one-to-one online. Free assessment, honest written feedback after every lesson."><meta property="og:url" content="https://suprithanalwad.in/"><meta property="og:image" content="https://suprithanalwad.in/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d332f'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='600' fill='%23a07b2e' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E"><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,0,700;8..60,1,400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#f7f3e9;font-family:'IBM Plex Sans',system-ui,sans-serif}a{color:#a07b2e}a:hover{color:#1d332f}input,select,textarea{font-family:'IBM Plex Sans',sans-serif}</style></helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1d332f"/><text x="50" y="66" font-family="Georgia,serif" font-size="46" font-weight="600" fill="#a07b2e" text-anchor="middle">S</text></svg></template>
+
+<div style="background:#f7f3e9;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteHeader" go="{{ go }}" active="{{ page }}" hint-size="100%,90px"></dc-import>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="width:100%">
+  <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 56px; padding: 64px 56px 88px; align-items: center; position: relative">
+    <div style="flex:1.05;display:flex;flex-direction:column;gap:20px">
+      <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">UNITED KINGDOM · AUSTRALIA · NEW ZEALAND</div>
+      <div style="border-left:3px solid #a07b2e;padding-left:22px;display:flex;flex-direction:column;gap:10px">
+        <div style="font: 600 58px/1.06 'Source Serif 4',serif; color: #1d332f; letter-spacing: -.03em; text-wrap: pretty; font-size: 55px">Helping Students Build Mathematical Intuition.</div>
+        <div style="font:400 15px/1.5 'Source Serif 4',serif;font-style:italic;color:#a07b2e">One-to-one, or a small group of two or three.</div>
+      </div>
+      <div style="font:400 17px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:520px;text-wrap:pretty">One patient teacher, one plan per child. Live online lessons for primary and secondary students — one-to-one, or in a small group of two or three at the same level, taught to your child's own curriculum and timezone.</div>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:6px">
+        <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 14px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:16px 26px;border-radius:2px" style-hover="background:#8c6a25">Book a Free Assessment</div>
+        <div onClick="{{ goCourses }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 14px 'IBM Plex Sans',sans-serif;color:#1d332f;border-bottom:1.5px solid #1d332f;padding-bottom:3px">See courses</div>
+      </div>
+      
+    </div>
+    <div style="flex:.95;position:relative">
+      <img src="uploads/file_000000002c3081fa9a59882b1b4ee3fb.png" alt="Supritha Nalwad teaching maths online" style="display:block;width:100%;height:auto;border-radius:2px">
+      <span style="position:absolute;bottom:-24px;left:-24px;background:#1d332f;color:#f7f3e9;padding:14px 20px;display:flex;flex-direction:column;gap:3px">
+        <span style="font:400 12px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">★★★★★</span>
+        <span style="font:400 13px 'Source Serif 4',serif;font-style:italic">"She never made him feel behind."</span>
+      </span>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-top:1px solid #e4dccb;border-bottom:1px solid #e4dccb">
+   <div style="max-width:1280px;margin:0 auto;padding:32px 56px;display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px">
+      <div style="font:600 24px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Which curriculum is your child studying?</div>
+      <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#8a8272;white-space:nowrap;flex:none">Your pick tailors the courses and reviews below</div>
+    </div>
+    <div style="display:flex;gap:16px">
+      <div onClick="{{ pickUK }}" style="{{ cardUK }}" style-hover="border-color:#a07b2e">
+        <div style="font:400 24px;line-height:1">🇬🇧</div>
+        <div style="font:600 16px 'Source Serif 4',serif;color:#1d332f">United Kingdom</div>
+        <div style="font:400 12.5px/1.5 'IBM Plex Sans',sans-serif;color:#4a5c57">11+ entrance · KS2 · KS3 · GCSE, all boards</div>
+      </div>
+      <div onClick="{{ pickAU }}" style="{{ cardAU }}" style-hover="border-color:#a07b2e">
+        <div style="font:400 24px;line-height:1">🇦🇺 🇳🇿</div>
+        <div style="font:600 16px 'Source Serif 4',serif;color:#1d332f">Australia &amp; New Zealand</div>
+        <div style="font:400 12.5px/1.5 'IBM Plex Sans',sans-serif;color:#4a5c57">NAPLAN numeracy · Years 3–10 core maths</div>
+      </div>
+    </div>
+    <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:#8a8272">Not sure where they sit? <span onClick="{{ goContact }}" style="cursor:pointer;color:#a07b2e;border-bottom:1px solid #a07b2e">Book a free assessment</span> and we'll place them properly.</div>
+   </div>
+  </div>
+
+  <div style="max-width:1280px;margin:0 auto;padding:56px;display:flex;flex-direction:column;gap:22px">
+    <sc-if value="{{ isUK }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px">
+          <div style="font:600 32px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">What we cover — United Kingdom</div>
+          <div onClick="{{ goCourses }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;border-bottom:1px solid #a07b2e;padding-bottom:2px">Full UK course page</div>
+        </div>
+        <div style="display:flex;gap:20px">
+          <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">11+ entrance</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Word problems, non-verbal reasoning, and the timing strategy that stops good children losing easy marks.</div></div>
+          <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">KS2 &amp; KS3</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Number sense, fractions, ratio and early algebra — filling the gaps school pace left behind.</div></div>
+          <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">GCSE, all boards</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Foundation to Higher, AQA / Edexcel / OCR, with past-paper technique and mark-scheme reading.</div></div>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isAU }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px">
+          <div style="font:600 32px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">What we cover — Australia &amp; New Zealand</div>
+          <div onClick="{{ goCourses }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;border-bottom:1px solid #a07b2e;padding-bottom:2px">Full AU / NZ course page</div>
+        </div>
+        <div style="display:flex;gap:20px">
+          <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">NAPLAN numeracy</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Years 3, 5, 7 and 9 — question types, calculator and non-calculator strategy, and test-day pacing.</div></div>
+          <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">Primary core maths</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Place value, fractions, measurement and problem solving, aligned to the Australian Curriculum and NZ Levels.</div></div>
+          <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">Years 7–10</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Algebra, geometry and statistics — building the fluency senior maths will assume next year.</div></div>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="background:#fff;border-top:1px solid #e4dccb">
+   <div style="max-width:1280px;margin:0 auto;padding:56px;display:flex;flex-direction:column;gap:28px">
+    <div style="font:600 32px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Why families stay</div>
+    <div style="display:flex;gap:32px">
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">01</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">Taught to your syllabus</div><div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Not a generic worksheet library. Lessons are mapped to the exact board, year group and test your child actually sits.</div></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">02</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">Confidence before speed</div><div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">We find the gap underneath the mistake and fix that. Marks follow understanding, not the other way round.</div></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">03</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">One teacher, every lesson</div><div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">No rotating tutors and no call centre. Every session is planned and taught by Supritha herself.</div></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">04</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">Parents kept in the loop</div><div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">A short written note after every session: what we covered, what landed, and what to practise this week.</div></div>
+    </div>
+   </div>
+  </div>
+
+  <div style="background:#1d332f;color:#f7f3e9">
+   <div style="max-width:1280px;margin:0 auto;padding:56px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font:600 32px 'Source Serif 4',serif;letter-spacing:-.02em">What families say</div>
+        <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#9db3ac">{{ reviewFilterNote }}</div>
+      </div>
+      <div onClick="{{ goReviews }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;color:#f7f3e9;border-bottom:1px solid #a07b2e;padding-bottom:2px">Read all reviews</div>
+    </div>
+    <div style="display:flex;gap:20px">
+      <sc-for list="{{ homeReviews }}" as="r" hint-placeholder-count="3">
+        <div style="flex:1;background:#25403b;padding:26px;display:flex;flex-direction:column;gap:12px">
+          <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">★★★★★</div>
+          <div style="font:400 16px/1.6 'Source Serif 4',serif;font-style:italic">{{ r.quote }}</div>
+          <div style="font:400 11.5px 'IBM Plex Sans',sans-serif;color:#9db3ac">{{ r.meta }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border:1px solid #3c554f;padding:20px 26px;display:flex;justify-content:space-between;align-items:center;gap:20px">
+      <div style="font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:#c7d6d1">Already learning with Supritha? Your words help another parent decide.</div>
+      <div onClick="{{ goFeedback }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:13px 20px;border-radius:2px">Share your feedback</div>
+    </div>
+   </div>
+  </div>
+
+  <div style="max-width:1280px;margin:0 auto;padding:56px;display:flex;flex-direction:column;gap:28px">
+    <div style="font:600 32px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">How it works</div>
+    <div style="display:flex;gap:20px">
+      <div style="flex:1;background:#fff;border:1px solid #e4dccb;border-top:2px solid #a07b2e;padding:24px;display:flex;flex-direction:column;gap:9px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">STEP ONE</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">Free assessment</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Thirty minutes with your child, then an honest written summary of where they actually are.</div></div>
+      <div style="flex:1;background:#fff;border:1px solid #e4dccb;border-top:2px solid #a07b2e;padding:24px;display:flex;flex-direction:column;gap:9px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">STEP TWO</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">A learning plan</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Topics, order and what "better" will look like by half-term — written down, not implied.</div></div>
+      <div style="flex:1;background:#fff;border:1px solid #e4dccb;border-top:2px solid #a07b2e;padding:24px;display:flex;flex-direction:column;gap:9px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">STEP THREE</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">Weekly lessons</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">One-to-one slots in your timezone that fit around school, sport and sleep.</div></div>
+      <div style="flex:1;background:#fff;border:1px solid #e4dccb;border-top:2px solid #a07b2e;padding:24px;display:flex;flex-direction:column;gap:9px"><div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">STEP FOUR</div><div style="font:600 19px 'Source Serif 4',serif;color:#1d332f">Visible progress</div><div style="font:400 13px/1.65 'IBM Plex Sans',sans-serif;color:#4a5c57">Notes after each session and a review every term, so you always know it's working.</div></div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-top:1px solid #e4dccb">
+   <div style="max-width:1280px;margin:0 auto;padding:48px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:620px">
+      <div style="font:600 26px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Pricing that fits your family</div>
+      <div style="font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Weekly, twice-weekly and exam-term intensive packages. Because fees vary by year group, timezone and how much ground there is to cover, I quote per family after the free assessment — no packages you don't need.</div>
+    </div>
+    <div onClick="{{ goPricing }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13.5px 'IBM Plex Sans',sans-serif;border:1px solid #1d332f;color:#1d332f;padding:14px 22px;border-radius:2px">Request a quote</div>
+   </div>
+  </div>
+
+  <div style="background:#f7f3e9;border-top:1px solid #e4dccb">
+   <div style="max-width:1280px;margin:0 auto;padding:72px 56px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+    <div style="font:600 42px/1.15 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em;max-width:760px;text-wrap:pretty">Let's find out where your child actually is.</div>
+    <div style="font:400 15px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:560px">A free thirty-minute assessment, an honest written summary, and no obligation of any kind. No card, no packages, no pressure.</div>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:8px">
+      <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 14px 'IBM Plex Sans',sans-serif;background:#1d332f;color:#f7f3e9;padding:16px 28px;border-radius:2px">Book a Free Assessment</div>
+      <div onClick="{{ goFaq }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13.5px 'IBM Plex Sans',sans-serif;color:#1d332f;border-bottom:1.5px solid #a07b2e;padding-bottom:3px">Or ask me a question first</div>
+    </div>
+   </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:1280px;margin:0 auto;display:flex;gap:56px;padding:64px 56px 72px">
+  <div style="flex:.85;display:flex;flex-direction:column;gap:16px">
+    <img src="uploads/file_00000000a0b081fa981f8acb4e0e746c.png" alt="Supritha Nalwad" style="display:block;width:100%;height:auto;border-radius:2px">
+    <div style="background:#fff;border:1px solid #e4dccb;padding:20px;display:flex;flex-direction:column;gap:10px">
+      <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">CREDENTIALS</div>
+      <div style="font:400 13px/1.9 'IBM Plex Sans',sans-serif;color:#4a5c57;display:flex;flex-direction:column">
+        <span>· M.Tech, Electronics &amp; Communication Engineering</span>
+        <span>· 15 years teaching Maths and Science</span>
+        <span>· Teaching one-to-one and small groups online</span>
+        <span>· UK, Australian &amp; NZ curricula</span>
+        
+      </div>
+    </div>
+  </div>
+  <div style="flex:1.15;display:flex;flex-direction:column;gap:22px">
+    <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">ABOUT</div>
+    <div style="font:600 46px/1.1 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em;text-wrap:pretty">More than just maths tuition. We build mathematical thinkers.</div>
+    <div style="border-left:3px solid #a07b2e;padding-left:24px;font:400 15.5px/1.85 'IBM Plex Sans',sans-serif;color:#4a5c57;display:flex;flex-direction:column;gap:16px">
+      <span style="font:400 21px/1.55 'Source Serif 4',serif;color:#1d332f;text-wrap:pretty">A strong maths student isn't someone who knows every formula. It's someone who understands the concept, knows how to approach a problem, and has the confidence to find the solution.</span>
+      <span>My teaching focuses on developing all three.</span>
+      <span>I work with students to strengthen their foundations, close learning gaps and gradually develop the skills needed to tackle unfamiliar and challenging problems.</span>
+      <span>With personalised 1-to-1 and small-group online classes, I work closely with each student to help them become more confident, independent learners.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">EVERY LESSON IS PURPOSEFUL</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;font:500 13px 'IBM Plex Sans',sans-serif;color:#1d332f">
+        <span style="background:#fff;border:1px solid #e4dccb;padding:10px 16px;border-radius:2px">Learn the concept</span>
+        <span style="color:#a07b2e">→</span>
+        <span style="background:#fff;border:1px solid #e4dccb;padding:10px 16px;border-radius:2px">Practise</span>
+        <span style="color:#a07b2e">→</span>
+        <span style="background:#fff;border:1px solid #e4dccb;padding:10px 16px;border-radius:2px">Apply</span>
+        <span style="color:#a07b2e">→</span>
+        <span style="background:#fff;border:1px solid #e4dccb;padding:10px 16px;border-radius:2px">Challenge</span>
+        <span style="color:#a07b2e">→</span>
+        <span style="background:#1d332f;color:#f7f3e9;border:1px solid #1d332f;padding:10px 16px;border-radius:2px">Improve</span>
+      </div>
+    </div>
+    <div style="background:#1d332f;color:#f7f3e9;padding:28px;display:flex;flex-direction:column;gap:12px">
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">★★★★★</div>
+      <div style="font:400 19px/1.6 'Source Serif 4',serif;font-style:italic">"She never once made him feel behind. That's the whole thing, really."</div>
+      <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#9db3ac">Parent of a Year 11 student · Leeds, UK</div>
+    </div>
+    <div style="display:flex;gap:20px">
+      <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">How I teach</div><div style="font:400 13px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Shared whiteboard, worked examples out loud, and questions your child answers before I do. No silent lectures.</div></div>
+      <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font:600 17px 'Source Serif 4',serif;color:#1d332f">What I ask of you</div><div style="font:400 13px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">A quiet room, a consistent weekly slot, and twenty minutes of practice between lessons. That's genuinely it.</div></div>
+    </div>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+      <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 14px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:15px 26px;border-radius:2px">Book a Free Assessment</div>
+      <div onClick="{{ goCourses }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13.5px 'IBM Plex Sans',sans-serif;color:#1d332f;border-bottom:1.5px solid #1d332f;padding-bottom:3px">See what I teach</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isCourses }}" hint-placeholder-val="{{ false }}">
+<div style="width:100%">
+  <div style="border-bottom:1px solid #e4dccb">
+    <div style="max-width:1280px;margin:0 auto;padding:20px 56px;display:flex;gap:10px;font:500 12.5px 'IBM Plex Sans',sans-serif;flex-wrap:wrap">
+      <span onClick="{{ pickUK }}" style="{{ tabUK }}">🇬🇧 United Kingdom</span>
+      <span onClick="{{ pickAU }}" style="{{ tabAU }}">🇦🇺 🇳🇿 Australia &amp; New Zealand</span>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:52px 56px 40px;display:flex;gap:56px;align-items:flex-end">
+    <div style="flex:1;display:flex;flex-direction:column;gap:14px">
+      <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">{{ courseEyebrow }}</div>
+      <div style="font:600 46px/1.1 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em">{{ courseHeading }}</div>
+      <div style="font:400 15px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:620px">{{ courseIntro }}</div>
+    </div>
+    <div onClick="{{ goContact }}" style="cursor:pointer;flex:none;white-space:nowrap;font:600 13.5px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:15px 24px;border-radius:2px">Book a Free Assessment</div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 48px;display:flex;flex-direction:column;gap:20px">
+    <sc-for list="{{ courses }}" as="c" hint-placeholder-count="3">
+      <div style="background:#fff;border:1px solid #e4dccb;border-left:3px solid #a07b2e;padding:30px;display:flex;gap:40px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+          <div style="font:600 26px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">{{ c.title }}</div>
+          <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#8a8272">{{ c.detail }}</div>
+          <div style="font:400 13.5px/1.75 'IBM Plex Sans',sans-serif;color:#4a5c57">{{ c.body }}</div>
+          <div onClick="{{ c.open }}" style="cursor:pointer;margin-top:6px;align-self:flex-start;white-space:nowrap;font:600 12.5px 'IBM Plex Sans',sans-serif;color:#a07b2e;border:1px solid #d8c9a4;background:#fdfaf3;padding:10px 16px;border-radius:2px" style-hover="background:#a07b2e;color:#fff;border-color:#a07b2e">View full course details →</div>
+        </div>
+        <div style="flex:.85;display:flex;flex-direction:column;gap:8px">
+          <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.18em;color:#a07b2e">WHAT WE COVER</div>
+          <div style="font:400 13px/1.9 'IBM Plex Sans',sans-serif;color:#4a5c57;display:flex;flex-direction:column">
+            <sc-for list="{{ c.covers }}" as="line" hint-placeholder-count="4"><span>{{ line }}</span></sc-for>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="background:#1d332f;color:#f7f3e9">
+    <div style="max-width:1280px;margin:0 auto;padding:40px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:10px;max-width:620px">
+        <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">★★★★★</div>
+        <div style="font:400 19px/1.6 'Source Serif 4',serif;font-style:italic">{{ courseQuote }}</div>
+        <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#9db3ac">{{ courseQuoteMeta }}</div>
+      </div>
+      <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13.5px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:15px 24px;border-radius:2px">Book a Free Assessment</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:90;background:rgba(19,32,29,.55);display:flex;align-items:flex-start;justify-content:center;padding:48px 24px;overflow:auto">
+  <div onClick="{{ closeCourse }}" style="position:fixed;inset:0"></div>
+  <div style="position:relative;width:100%;max-width:920px;background:#f7f3e9;border:1px solid #d8c9a4;box-shadow:0 30px 70px rgba(19,32,29,.3)">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding:32px 40px 24px;border-bottom:1px solid #e4dccb;background:#fff">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">COURSE DETAILS</div>
+        <div style="font:600 34px/1.1 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em">{{ modalTitle }}</div>
+        <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:#8a8272">{{ modalDetail }}</div>
+      </div>
+      <div onClick="{{ closeCourse }}" style="cursor:pointer;flex:none;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #ddd5c2;font:400 16px 'IBM Plex Sans',sans-serif;color:#4a5c57;border-radius:2px" style-hover="background:#1d332f;color:#f7f3e9;border-color:#1d332f">✕</div>
+    </div>
+
+    <div style="padding:30px 40px;display:flex;flex-direction:column;gap:34px">
+      <div style="font:400 15px/1.75 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:680px;text-wrap:pretty">{{ modalSummary }}</div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e4dccb;border:1px solid #e4dccb">
+        <sc-for list="{{ modalStats }}" as="s" hint-placeholder-count="6">
+          <div style="background:#fff;padding:16px 18px;display:flex;flex-direction:column;gap:5px">
+            <div style="font:500 9.5px 'IBM Plex Sans',sans-serif;letter-spacing:.16em;color:#a07b2e;text-transform:uppercase">{{ s.k }}</div>
+            <div style="font:500 13.5px 'IBM Plex Sans',sans-serif;color:#1d332f">{{ s.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font:600 22px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">How the teaching works</div>
+        <div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:640px">The same six-step approach runs through every course — it is the reason results hold up after the tuition stops.</div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px">
+          <sc-for list="{{ courseApproach }}" as="a" hint-placeholder-count="6">
+            <div style="background:#fff;border:1px solid #e4dccb;padding:18px 20px;display:flex;gap:14px;align-items:flex-start">
+              <div style="flex:none;font:600 12px 'IBM Plex Sans',sans-serif;color:#a07b2e;padding-top:2px">{{ a.n }}</div>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <div style="font:600 14.5px 'IBM Plex Sans',sans-serif;color:#1d332f">{{ a.name }}</div>
+                <div style="font:400 13px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">{{ a.body }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font:600 22px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">The course, module by module</div>
+        <div style="display:flex;flex-direction:column">
+          <sc-for list="{{ modalModules }}" as="m" hint-placeholder-count="5">
+            <div style="display:flex;gap:20px;padding:16px 0;border-top:1px solid #e4dccb">
+              <div style="flex:none;width:34px;font:600 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;padding-top:2px">{{ m.n }}</div>
+              <div style="flex:none;width:230px;font:600 14.5px 'IBM Plex Sans',sans-serif;color:#1d332f">{{ m.name }}</div>
+              <div style="flex:1;font:400 13px/1.75 'IBM Plex Sans',sans-serif;color:#4a5c57">{{ m.body }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <sc-if value="{{ modalHasMocks }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#1d332f;color:#f7f3e9;padding:28px 30px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#c9a75a">TIMED MOCK TESTS</div>
+            <div style="font:600 24px 'Source Serif 4',serif;letter-spacing:-.02em">Eleven-plus papers, always against the clock</div>
+            <div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#c3d2ce;max-width:620px">{{ modalMocksNote }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1px;background:rgba(247,243,233,.16)">
+            <div style="display:flex;gap:20px;background:#1d332f;padding:10px 0;font:500 9.5px 'IBM Plex Sans',sans-serif;letter-spacing:.16em;color:#9db3ac">
+              <div style="flex:1">PAPER</div>
+              <div style="flex:none;width:110px">TIME LIMIT</div>
+              <div style="flex:none;width:140px">WHEN</div>
+              <div style="flex:1.4">WHAT IT IS FOR</div>
+            </div>
+            <sc-for list="{{ modalMocks }}" as="t" hint-placeholder-count="7">
+              <div style="display:flex;gap:20px;background:#1d332f;padding:13px 0;align-items:baseline">
+                <div style="flex:1;font:500 13.5px 'IBM Plex Sans',sans-serif;color:#f7f3e9">{{ t.name }}</div>
+                <div style="flex:none;width:110px;font:600 13.5px 'IBM Plex Sans',sans-serif;color:#e0b95f">{{ t.time }}</div>
+                <div style="flex:none;width:140px;font:400 12.5px 'IBM Plex Sans',sans-serif;color:#c3d2ce">{{ t.when }}</div>
+                <div style="flex:1.4;font:400 12.5px/1.6 'IBM Plex Sans',sans-serif;color:#c3d2ce">{{ t.note }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="font:600 22px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">By the end of the course</div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+          <sc-for list="{{ modalOutcomes }}" as="o" hint-placeholder-count="4">
+            <div style="display:flex;gap:10px;align-items:baseline;font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">
+              <span style="flex:none;color:#a07b2e">✓</span><span>{{ o }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #e4dccb;background:#fff;padding:22px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+      <div style="font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:#8a8272;max-width:460px">Every course starts with a free written assessment and a plan you can read before you commit to anything.</div>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div onClick="{{ closeCourse }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;border:1px solid #ddd5c2;color:#4a5c57;padding:13px 20px;border-radius:2px">Close</div>
+        <div onClick="{{ bookFromModal }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:13px 22px;border-radius:2px">Book a Free Assessment</div>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isReviews }}" hint-placeholder-val="{{ false }}">
+<div style="width:100%">
+  <div style="max-width:1280px;margin:0 auto;padding:56px 56px 40px;display:flex;justify-content:space-between;gap:56px;align-items:flex-end">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:640px">
+      <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">REVIEWS &amp; TESTIMONIALS</div>
+      <div style="font:600 46px/1.1 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em;text-wrap:pretty">In the words of the families I teach.</div>
+      <div style="font:400 15px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Every review below was submitted by a current or former parent or student and published with their permission. Nothing here is edited beyond spelling.</div>
+    </div>
+    <div style="flex:none;background:#fff;border:1px solid #e4dccb;padding:24px 28px;display:flex;flex-direction:column;gap:6px;text-align:center">
+      <div style="font:600 44px 'Source Serif 4',serif;color:#1d332f;line-height:1">5.0</div>
+      <div style="font:400 14px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">★★★★★</div>
+      <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#8a8272;white-space:nowrap">from 24 verified reviews</div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;font:500 12.5px 'IBM Plex Sans',sans-serif">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6">
+        <span onClick="{{ f.click }}" style="{{ f.style }}">{{ f.label }}</span>
+      </sc-for>
+    </div>
+    <div onClick="{{ goFeedback }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:12px 20px;border-radius:2px">Leave a review</div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 20px">
+    <div style="background:#1d332f;color:#f7f3e9;padding:34px;display:flex;flex-direction:column;gap:14px">
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">★★★★★ &nbsp;·&nbsp; <span style="letter-spacing:.06em;color:#9db3ac">FEATURED STORY</span></div>
+      <div style="font:400 22px/1.55 'Source Serif 4',serif;font-style:italic;text-wrap:pretty;max-width:900px">"He used to hide his maths book from us. Six months in, he shows me his working before I even ask. The grade moved, yes — but the change we actually noticed was that he stopped believing he was 'bad at maths'."</div>
+      <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:#9db3ac">Parent of a Year 6 student · Manchester, UK · KS2 &amp; 11+ · Nine months of weekly lessons</div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 12px;font:400 12.5px 'IBM Plex Sans',sans-serif;color:#8a8272">{{ reviewCountNote }}</div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start">
+    <sc-for list="{{ shownReviews }}" as="r" hint-placeholder-count="9">
+      <div style="{{ r.cardStyle }}">
+        <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:#a07b2e;letter-spacing:.14em">{{ r.stars }}</div>
+        <div style="font:400 15px/1.65 'Source Serif 4',serif;color:#1d332f">{{ r.quote }}</div>
+        <div style="font:400 11.5px/1.6 'IBM Plex Sans',sans-serif;color:#8a8272">{{ r.meta }}</div>
+      </div>
+    </sc-for>
+    <div style="border:1px dashed #c9bfa8;padding:24px;display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:center;text-align:center;min-height:150px">
+      <div style="font:600 16px 'Source Serif 4',serif;color:#1d332f">Your review could sit here.</div>
+      <div style="font:400 12.5px/1.6 'IBM Plex Sans',sans-serif;color:#8a8272">Two minutes, and it helps the next parent decide.</div>
+      <div onClick="{{ goFeedback }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 12.5px 'IBM Plex Sans',sans-serif;border:1px solid #1d332f;color:#1d332f;padding:10px 16px;border-radius:2px">Leave a review</div>
+    </div>
+  </div>
+  <sc-if value="{{ hasMore }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1280px;margin:0 auto;padding:0 56px 56px;display:flex;justify-content:center">
+      <div onClick="{{ loadMore }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;border:1px solid #ddd5c2;color:#4a5c57;padding:13px 24px;border-radius:2px">{{ moreLabel }}</div>
+    </div>
+  </sc-if>
+  <div style="background:#fff;border-top:1px solid #e4dccb">
+    <div style="max-width:1280px;margin:0 auto;padding:48px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:620px">
+        <div style="font:600 26px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Reviews are lovely. A trial lesson is better.</div>
+        <div style="font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Book a free thirty-minute assessment and judge for yourself — you'll get an honest written summary either way.</div>
+      </div>
+      <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13.5px 'IBM Plex Sans',sans-serif;background:#1d332f;color:#f7f3e9;padding:15px 24px;border-radius:2px">Book a Free Assessment</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isFeedback }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:1280px;margin:0 auto;padding:56px;display:flex;gap:28px;align-items:flex-start">
+  <div style="flex:1.25;background:#fff;border:1px solid #e4dccb;padding:32px;display:flex;flex-direction:column;gap:20px">
+    <sc-if value="{{ notFbSent }}" hint-placeholder-val="{{ true }}">
+      <div data-form="feedback" style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">SHARE YOUR FEEDBACK</div>
+          <div style="font:600 30px/1.15 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Tell me how it's going.</div>
+          <div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Two minutes, and it genuinely shapes how I teach. Nothing is published unless you tick the box below — and you can ask me to take it down at any time.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">HOW WOULD YOU RATE YOUR EXPERIENCE?</div>
+          <div style="display:flex;gap:4px">
+            <sc-for list="{{ starList }}" as="s" hint-placeholder-count="5"><span onClick="{{ s.click }}" style="{{ s.style }}">★</span></sc-for>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+            <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">I AM A…</div>
+            <div style="display:flex;gap:8px">
+              <div onClick="{{ pickParent }}" style="{{ roleParent }}">Parent</div>
+              <div onClick="{{ pickStudent }}" style="{{ roleStudent }}">Student</div>
+            </div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+            <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">FIRST NAME</div>
+            <input placeholder="e.g. Priya" style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none">
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+            <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">CITY &amp; COUNTRY</div>
+            <input placeholder="e.g. Auckland, New Zealand" style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none">
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+            <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">CURRICULUM</div>
+            <select style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none"><option>UK — GCSE</option><option>UK — 11+</option><option>UK — KS2 / KS3</option><option>Australia / NZ</option></select>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">WHAT CHANGED FOR YOUR CHILD?</div>
+          <textarea onInput="{{ onNote }}" maxlength="600" placeholder="Confidence, grades, attitude to homework, how lessons feel — whatever stands out. A few honest sentences beat a paragraph of praise." style="border:1px solid #ddd5c2;background:#fbfaf6;padding:13px;min-height:96px;font:400 13px/1.7 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none;resize:vertical"></textarea>
+          <div style="font:400 11.5px 'IBM Plex Sans',sans-serif;color:#b3aa99;align-self:flex-end">{{ noteCount }}</div>
+        </div>
+        <div style="border:1px solid #e4dccb;background:#fbfaf6;padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">PERMISSION TO PUBLISH</div>
+          <sc-for list="{{ publishOpts }}" as="p" hint-placeholder-count="3">
+            <div onClick="{{ p.click }}" style="cursor:pointer;display:flex;gap:10px;align-items:flex-start">
+              <span style="{{ p.box }}">{{ p.mark }}</span>
+              <span style="font:400 12.5px/1.6 'IBM Plex Sans',sans-serif;color:#4a5c57">{{ p.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ errorStyle }}">{{ formError }}</div>
+        <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+          <div onClick="{{ sendFeedback }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 14px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:15px 26px;border-radius:2px">Send feedback</div>
+          <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#8a8272">Your email is never published. Nothing goes live automatically.</div>
+          <div style="font:500 12px 'IBM Plex Sans',sans-serif;color:#a07b2e">{{ sendingNote }}</div>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ fbSent }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:24px 0">
+        <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">FEEDBACK RECEIVED</div>
+        <div style="font:600 32px/1.15 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Thank you — that means a lot.</div>
+        <div style="font:400 14px/1.8 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:560px">I read every message myself. If you've allowed publishing, your review will appear on the Reviews page within a couple of days, once I've checked it for anything identifying your child.</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
+          <div onClick="{{ goHome }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13px 'IBM Plex Sans',sans-serif;background:#1d332f;color:#f7f3e9;padding:13px 20px;border-radius:2px">Back to home</div>
+          <div onClick="{{ goReviews }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;border:1px solid #ddd5c2;color:#4a5c57;padding:13px 20px;border-radius:2px">See the reviews wall</div>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+  <div style="flex:.85;display:flex;flex-direction:column;gap:24px">
+    <div style="background:#1d332f;color:#f7f3e9;padding:30px;display:flex;flex-direction:column;gap:12px">
+      <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">HOW IT'S HANDLED</div>
+      <div style="font:600 24px/1.25 'Source Serif 4',serif;letter-spacing:-.02em">Nothing goes live without your say-so.</div>
+      <div style="font:400 13.5px/1.75 'IBM Plex Sans',sans-serif;color:#c7d6d1">Every submission lands in one list that only I read. Approving publishes it to the Reviews wall; featuring also swaps it into the homepage trio for its region. Private ones never appear anywhere, and you can ask me to remove yours at any time.</div>
+    </div>
+    <div style="border:1px dashed #c9bfa8;padding:20px;font:400 12.5px/1.75 'IBM Plex Sans',sans-serif;color:#4a5c57">
+      <b style="color:#1d332f">Where parents find this form:</b> a link in the footer of every page, the "Share your feedback" band on the homepage and Reviews wall, and a one-line ask in the end-of-term progress email — which is where most reviews will actually come from.
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isPricing }}" hint-placeholder-val="{{ false }}">
+<div style="width:100%">
+  <div style="border-bottom:1px solid #e4dccb">
+    <div style="max-width:1280px;margin:0 auto;padding:56px 56px 36px;display:flex;flex-direction:column;gap:14px">
+      <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">PRICING &amp; PACKAGES</div>
+      <div style="font:600 46px/1.1 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em;text-wrap:pretty">You should know what you're buying before you know what it costs.</div>
+      <div style="font:400 15px/1.75 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:760px">Fees depend on year group, timezone and how much ground there is to cover — so I quote per family after the free assessment, rather than selling a package you may not need. Here's exactly what each one includes.</div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:44px 56px;display:flex;gap:20px">
+    <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:30px;display:flex;flex-direction:column;gap:14px">
+      <div style="font:600 24px 'Source Serif 4',serif;color:#1d332f">Weekly</div>
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#8a8272">One 55-minute lesson each week</div>
+      <div style="font:400 13.5px/1.9 'IBM Plex Sans',sans-serif;color:#4a5c57;display:flex;flex-direction:column;border-top:1px solid #e4dccb;padding-top:14px"><span>· Written plan, reviewed each term</span><span>· Practice set after every lesson</span><span>· Note to parents after every lesson</span><span>· Email support between lessons</span></div>
+      <div style="font:400 12.5px/1.7 'IBM Plex Sans',sans-serif;color:#8a8272;margin-top:auto;padding-top:14px">Best for steady progress and confidence-building through the school year.</div>
+    </div>
+    <div style="flex:1;background:#1d332f;color:#f7f3e9;border:1px solid #1d332f;padding:30px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><div style="font:600 24px 'Source Serif 4',serif">Twice weekly</div><span style="white-space:nowrap;flex:none;font:500 9.5px 'IBM Plex Sans',sans-serif;letter-spacing:.16em;color:#1d332f;background:#a07b2e;padding:5px 9px">MOST FAMILIES</span></div>
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#9db3ac">Two 55-minute lessons each week</div>
+      <div style="font:400 13.5px/1.9 'IBM Plex Sans',sans-serif;color:#c7d6d1;display:flex;flex-direction:column;border-top:1px solid #3c554f;padding-top:14px"><span>· Everything in Weekly</span><span>· Faster gap-closing before exams</span><span>· Homework marked between sessions</span><span>· Priority slot in your timezone</span></div>
+      <div style="font:400 12.5px/1.7 'IBM Plex Sans',sans-serif;color:#9db3ac;margin-top:auto;padding-top:14px">Best when there's real ground to make up, or an exam within two terms.</div>
+    </div>
+    <div style="flex:1;background:#fff;border:1px solid #e4dccb;padding:30px;display:flex;flex-direction:column;gap:14px">
+      <div style="font:600 24px 'Source Serif 4',serif;color:#1d332f">Exam-term intensive</div>
+      <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:#8a8272">Fixed block, 6–10 weeks before the paper</div>
+      <div style="font:400 13.5px/1.9 'IBM Plex Sans',sans-serif;color:#4a5c57;display:flex;flex-direction:column;border-top:1px solid #e4dccb;padding-top:14px"><span>· Past papers, timed and reviewed</span><span>· Mark-scheme reading technique</span><span>· Topic triage by paper weighting</span><span>· Two check-ins with parents</span></div>
+      <div style="font:400 12.5px/1.7 'IBM Plex Sans',sans-serif;color:#8a8272;margin-top:auto;padding-top:14px">For 11+, GCSE and NAPLAN. Places are limited each season.</div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 44px;display:flex;gap:20px">
+    <div style="flex:1;background:#fff;border:1px dashed #c9bfa8;padding:24px;font:400 13px/1.8 'IBM Plex Sans',sans-serif;color:#4a5c57"><b style="font:600 15px 'Source Serif 4',serif;color:#1d332f;display:block;margin-bottom:6px">Billing, plainly</b>Monthly in advance, in your own currency. Cancel with two weeks' notice. Missed lessons rescheduled free with 24 hours' notice. No joining fee, no minimum term.</div>
+    <div style="flex:1;background:#fff;border:1px dashed #c9bfa8;padding:24px;font:400 13px/1.8 'IBM Plex Sans',sans-serif;color:#4a5c57"><b style="font:600 15px 'Source Serif 4',serif;color:#1d332f;display:block;margin-bottom:6px">Siblings &amp; small groups</b>Two children from the same family can share a plan at a reduced rate. Pairs of friends at the same level are welcome — ask when you enquire.</div>
+  </div>
+  <div style="background:#fff;border-top:1px solid #e4dccb">
+    <div style="max-width:1280px;margin:0 auto;padding:48px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:620px">
+        <div style="font:600 26px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Get a quote for your family</div>
+        <div style="font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">Tell me your child's year group and timezone and I'll come back within a day with a package, a price and an honest view of how long it should take.</div>
+      </div>
+      <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13.5px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:15px 24px;border-radius:2px">Request a quote</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:1280px;margin:0 auto;padding:56px;display:flex;gap:48px;align-items:flex-start">
+  <div style="flex:1.1;background:#fff;border:1px solid #e4dccb;padding:32px;display:flex;flex-direction:column;gap:20px">
+    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <div data-form="enquiry" style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">BOOK A FREE ASSESSMENT</div>
+          <div style="font:600 32px/1.15 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Thirty minutes, no obligation.</div>
+          <div style="font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">I'll meet your child, work through a few questions with them, and send you an honest written summary of where they are — whether or not we go further.</div>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:7px"><div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">YOUR NAME</div><input placeholder="e.g. Anita Sharma" style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none"></div>
+          <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:7px"><div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">EMAIL</div><input placeholder="you@example.com" style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none"></div>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div style="flex:1;min-width:180px;display:flex;flex-direction:column;gap:7px"><div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">COUNTRY &amp; TIMEZONE</div><select style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none"><option>United Kingdom — GMT/BST</option><option>Australia — AEST/AEDT</option><option>New Zealand — NZST</option></select></div>
+          <div style="flex:1;min-width:150px;display:flex;flex-direction:column;gap:7px"><div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">CURRICULUM</div><select style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none"><option>UK — GCSE</option><option>UK — 11+</option><option>UK — KS2 / KS3</option><option>Australia / NZ</option></select></div>
+          <div style="flex:.65;min-width:120px;display:flex;flex-direction:column;gap:7px"><div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">YEAR GROUP</div><select style="border:1px solid #ddd5c2;background:#fbfaf6;padding:11px 13px;font:400 13px 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none"><option>Year 4</option><option>Year 5</option><option>Year 6</option><option>Year 7</option><option>Year 8</option><option>Year 9</option><option>Year 10</option><option>Year 11</option></select></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">WHEN SUITS YOU BEST? <span style="letter-spacing:0;text-transform:none;font-weight:400">(pick any — times shown in your timezone)</span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;font:500 12.5px 'IBM Plex Sans',sans-serif">
+            <sc-for list="{{ slots }}" as="t" hint-placeholder-count="4"><span onClick="{{ t.click }}" style="{{ t.style }}">{{ t.label }}</span></sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font:500 11.5px 'IBM Plex Sans',sans-serif;letter-spacing:.1em;color:#8a8272">WHAT WOULD YOU LIKE TO CHANGE?</div>
+          <textarea placeholder="A topic they're stuck on, an exam coming up, or just that maths has stopped being fun. Anything you tell me here saves time in the assessment." style="border:1px solid #ddd5c2;background:#fbfaf6;padding:13px;min-height:84px;font:400 13px/1.7 'IBM Plex Sans',sans-serif;color:#1d332f;border-radius:2px;outline:none;resize:vertical"></textarea>
+        </div>
+        <div style="{{ errorStyle }}">{{ formError }}</div>
+        <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+          <div onClick="{{ sendEnquiry }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 14px 'IBM Plex Sans',sans-serif;background:#1d332f;color:#f7f3e9;padding:15px 26px;border-radius:2px">Request my free assessment</div>
+          <div style="font:400 12px 'IBM Plex Sans',sans-serif;color:#8a8272">I reply within one working day.</div>
+          <div style="font:500 12px 'IBM Plex Sans',sans-serif;color:#a07b2e">{{ sendingNote }}</div>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:14px;padding:24px 0">
+        <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">REQUEST SENT</div>
+        <div style="font:600 32px/1.15 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Got it — I'll be in touch within a day.</div>
+        <div style="font:400 14px/1.8 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:560px">You'll get an email from hello@suprithanalwad.in with two or three slot options in your own timezone. If none of them work, just reply and we'll find one that does.</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
+          <div onClick="{{ goCourses }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13px 'IBM Plex Sans',sans-serif;background:#1d332f;color:#f7f3e9;padding:13px 20px;border-radius:2px">Read about the courses</div>
+          <div onClick="{{ goFaq }}" style="cursor:pointer;white-space:nowrap;flex:none;font:500 13px 'IBM Plex Sans',sans-serif;border:1px solid #ddd5c2;color:#4a5c57;padding:13px 20px;border-radius:2px">Browse the FAQ</div>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+  <div style="flex:.9;display:flex;flex-direction:column;gap:20px">
+    <div style="background:#1d332f;color:#f7f3e9;padding:28px;display:flex;flex-direction:column;gap:12px">
+      <div style="font:500 10px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">OR JUST WRITE TO ME</div>
+      <div style="font:600 20px 'Source Serif 4',serif">hello@suprithanalwad.in</div>
+      <div style="font:400 13px/1.75 'IBM Plex Sans',sans-serif;color:#c7d6d1">Teaching hours span UK, Australian and NZ evenings, so there's almost always a slot that fits your family's week.</div>
+    </div>
+    <div style="background:#fff;border:1px solid #e4dccb;padding:28px;display:flex;flex-direction:column;gap:18px">
+      <div style="font:600 24px 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">Common questions</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font:400 13px/1.7 'IBM Plex Sans',sans-serif;color:#4a5c57">
+        <div style="border-bottom:1px solid #e4dccb;padding-bottom:14px"><b style="font:600 14.5px 'Source Serif 4',serif;color:#1d332f;display:block;margin-bottom:4px">How do lessons actually run?</b>Video call with a shared whiteboard. Your child writes as we go; nothing needs installing beyond a browser.</div>
+        <div style="border-bottom:1px solid #e4dccb;padding-bottom:14px"><b style="font:600 14.5px 'Source Serif 4',serif;color:#1d332f;display:block;margin-bottom:4px">What about the timezone difference?</b>Slots are booked and shown in your local time. Australian and NZ families usually take early-morning or after-school slots in their own time.</div>
+        <div style="border-bottom:1px solid #e4dccb;padding-bottom:14px"><b style="font:600 14.5px 'Source Serif 4',serif;color:#1d332f;display:block;margin-bottom:4px">Is there homework?</b>A short practice set each week — around twenty minutes. It's marked and reviewed at the start of the next lesson.</div>
+        <div><b style="font:600 14.5px 'Source Serif 4',serif;color:#1d332f;display:block;margin-bottom:4px">Safeguarding?</b>Background-checked, lessons recorded on request, and a parent contact on file for every student.</div>
+      </div>
+      <div onClick="{{ goFaq }}" style="cursor:pointer;white-space:nowrap;flex:none;align-self:flex-start;font:500 13px 'IBM Plex Sans',sans-serif;color:#a07b2e;border-bottom:1px solid #a07b2e;padding-bottom:2px">Read the full FAQ</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isFaq }}" hint-placeholder-val="{{ false }}">
+<div style="width:100%">
+  <div style="max-width:1280px;margin:0 auto;padding:56px 56px 36px;display:flex;flex-direction:column;gap:14px">
+    <div style="font:500 10.5px 'IBM Plex Sans',sans-serif;letter-spacing:.2em;color:#a07b2e">FREQUENTLY ASKED</div>
+    <div style="font:600 46px/1.1 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.03em;text-wrap:pretty">Everything parents ask me before the first lesson.</div>
+    <div style="font:400 15px/1.75 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:700px">If your question isn't here, email me and I'll answer it properly — and probably add it to this page.</div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 56px 48px;display:flex;flex-direction:column;gap:20px">
+    <sc-for list="{{ faqGroups }}" as="g" hint-placeholder-count="4">
+      <div style="background:#fff;border:1px solid #e4dccb;padding:30px;display:flex;gap:40px">
+        <div style="flex:none;width:220px;font:600 22px/1.2 'Source Serif 4',serif;color:#1d332f;letter-spacing:-.02em">{{ g.title }}</div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:16px">
+          <sc-for list="{{ g.items }}" as="q" hint-placeholder-count="3">
+            <div onClick="{{ q.click }}" style="{{ q.rowStyle }}">
+              <div style="display:flex;justify-content:space-between;gap:20px;align-items:baseline">
+                <div style="font:600 15.5px 'Source Serif 4',serif;color:#1d332f">{{ q.q }}</div>
+                <div style="flex:none;font:400 14px 'IBM Plex Sans',sans-serif;color:#a07b2e">{{ q.icon }}</div>
+              </div>
+              <div style="{{ q.answerStyle }}">{{ q.a }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="background:#1d332f;color:#f7f3e9">
+    <div style="max-width:1280px;margin:0 auto;padding:48px 56px;display:flex;justify-content:space-between;align-items:center;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:620px">
+        <div style="font:600 26px 'Source Serif 4',serif;letter-spacing:-.02em">Still not sure? Ask me directly.</div>
+        <div style="font:400 14px/1.7 'IBM Plex Sans',sans-serif;color:#c7d6d1">No sales pitch — just a straight answer, usually the same day.</div>
+      </div>
+      <div onClick="{{ goContact }}" style="cursor:pointer;white-space:nowrap;flex:none;font:600 13.5px 'IBM Plex Sans',sans-serif;background:#a07b2e;color:#fff;padding:15px 24px;border-radius:2px">Ask a question</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<div style="margin-top:auto">
+<dc-import name="SiteFooter" go="{{ go }}" hint-size="100%,280px"></dc-import>
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+// Where the contact and feedback forms POST. Set to "" to keep the prototype
+// behaviour (confirmation screen, nothing sent). On the Hostinger VPS this is
+// served by the small Node service in deploy/form-api.js — see deploy/DEPLOY.md.
+const FORM_ENDPOINT = "/api/submit";
+
+const ALL_REVIEWS = [
+  // 11+
+  {region:"uk", course:"eleven", who:"parent", quote:"\"She went from dreading maths homework to asking for extra questions. The 11+ result speaks for itself.\"", meta:"Parent · London, UK · 11+ · offer from first-choice grammar"},
+  {region:"uk", course:"eleven", who:"parent", quote:"\"The timed mocks were the turning point. He stopped running out of paper time and started checking his answers.\"", meta:"Parent · Buckinghamshire, UK · 11+ GL"},
+  {region:"uk", course:"eleven", who:"parent", quote:"\"Eight full papers before the real one. By exam morning it was just another Saturday test.\"", meta:"Parent · Kent, UK · 11+ CEM"},
+  {region:"uk", course:"eleven", who:"student", quote:"\"I learned which questions to leave. That sounds small but it got me through the whole paper.\"", meta:"Student, Year 6 · Trafford, UK · 11+"},
+  {region:"uk", course:"eleven", who:"parent", quote:"\"Her feedback after each mock said exactly where the minutes went. No other tutor gave us that.\"", meta:"Parent · Essex, UK · 11+ independent-school paper"},
+  {region:"uk", course:"eleven", who:"parent", quote:"\"We started eighteen months out on her advice and it was the right call — no cramming, no tears.\"", meta:"Parent · Surrey, UK · 11+ · two children"},
+  // SATs
+  {region:"uk", course:"sats", who:"parent", quote:"\"He came out of the SATs reasoning paper saying it was easier than the practice ones. That never happens.\"", meta:"Parent · Manchester, UK · Year 6 SATs"},
+  {region:"uk", course:"sats", who:"parent", quote:"\"Arithmetic went from a scramble to something he finished with ten minutes spare.\"", meta:"Parent · Nottingham, UK · Year 6 SATs"},
+  {region:"uk", course:"sats", who:"parent", quote:"\"Word problems used to be a wall. Now she draws the situation first and just solves it.\"", meta:"Parent · Cardiff, UK · Year 5 · SATs preparation"},
+  {region:"uk", course:"sats", who:"student", quote:"\"The bar models made fractions make sense. I use them in class now too.\"", meta:"Student, Year 6 · Sheffield, UK · SATs"},
+  {region:"uk", course:"sats", who:"parent", quote:"\"She found gaps from Year 3 that school had never flagged. Fixing those fixed everything above them.\"", meta:"Parent · Newcastle, UK · Year 6 SATs"},
+  // KS3
+  {region:"uk", course:"ks3", who:"parent", quote:"\"Year 8 algebra had quietly stopped making sense. Six weeks later he was ahead of the class set.\"", meta:"Parent · Reading, UK · KS3 Year 8"},
+  {region:"uk", course:"ks3", who:"parent", quote:"\"She kept up with his school topics while repairing the primary gaps underneath. Both at once.\"", meta:"Parent · Glasgow, UK · KS3 Year 7"},
+  {region:"uk", course:"ks3", who:"student", quote:"\"I moved up a set at the end of the year. I didn't think that was even possible.\"", meta:"Student, Year 9 · Liverpool, UK · KS3"},
+  {region:"uk", course:"ks3", who:"parent", quote:"\"The weekly note told me honestly what was still shaky. No sugar-coating, which I appreciated.\"", meta:"Parent · Norwich, UK · KS3 Year 9"},
+  {region:"uk", course:"ks3", who:"parent", quote:"\"He starts GCSE content next term without the panic we were expecting.\"", meta:"Parent · Leicester, UK · KS3 Year 9"},
+  // Other courses
+  {region:"uk", course:"gcse", who:"parent", quote:"\"Grade 5 in the mock, grade 8 in the real paper. She never once made him feel behind.\"", meta:"Parent · Leeds, UK · GCSE Higher, AQA"},
+  {region:"uk", course:"gcse", who:"student", quote:"\"I stopped panicking in tests because I actually understood the method instead of memorising it.\"", meta:"Student, Year 11 · Birmingham, UK"},
+  {region:"uk", course:"gcse", who:"student", quote:"\"The written notes after each lesson meant I always knew exactly what to practise.\"", meta:"Student, Year 10 · Bristol, UK"},
+  {region:"au", course:"naplan", who:"parent", quote:"\"NAPLAN stopped being a thing we dreaded in this house. That alone was worth it.\"", meta:"Parent · Brisbane, AU · Year 5 · NAPLAN"},
+  {region:"au", course:"secondary", who:"parent", quote:"\"Patient, never rushed, and explains it three different ways until one of them lands.\"", meta:"Parent · Melbourne, AU · Year 9 maths"},
+  {region:"nz", course:"primary", who:"parent", quote:"\"Two terms in and she's the one explaining fractions to her little brother.\"", meta:"Parent · Auckland, NZ · Year 7 core maths"},
+  {region:"nz", course:"secondary", who:"parent", quote:"\"Early-morning slots before school worked perfectly for us in NZ time.\"", meta:"Parent · Wellington, NZ · Year 9"},
+  {region:"au", course:"secondary", who:"student", quote:"\"I actually like maths now, which I did not expect to ever say.\"", meta:"Student, Year 8 · Perth, AU"}
+];
+
+const HOME_REVIEWS = {
+  uk: [
+    {quote:"\"She went from dreading maths homework to asking for extra questions. The 11+ result speaks for itself.\"", meta:"Parent of a Year 6 student · London · 11+"},
+    {quote:"\"Grade 5 in the mock, grade 8 in the real paper. Supritha never once made him feel behind.\"", meta:"Parent of a Year 11 student · Leeds · GCSE"},
+    {quote:"\"I stopped panicking in tests because I actually understood the method instead of memorising it.\"", meta:"Student, Year 11 · Birmingham"}
+  ],
+  au: [
+    {quote:"\"Two terms in and she's the one explaining fractions to her little brother.\"", meta:"Parent of a Year 7 student · Auckland"},
+    {quote:"\"Patient, never rushed, and explains it three different ways until one of them lands.\"", meta:"Parent of a Year 9 student · Melbourne"},
+    {quote:"\"NAPLAN stopped being a thing we dreaded in this house. That alone was worth it.\"", meta:"Parent of a Year 5 student · Brisbane"}
+  ]
+};
+
+const TEACH_APPROACH = [
+  {n:"01",name:"Find the real starting point",body:"A free written assessment, not a chat. It shows the earliest idea that isn't secure — often a year or two below current year group — because teaching above a gap never holds."},
+  {n:"02",name:"Show it before naming it",body:"New ideas arrive as pictures first: bar models, number lines, arrays on the shared whiteboard. The written method comes second, once the child can already see why it works."},
+  {n:"03",name:"Your child does the writing",body:"I talk less than most tutors. Your child works on the shared board while I watch the thinking happen, and I step in at the moment of the mistake rather than at the end."},
+  {n:"04",name:"Practise until it is automatic",body:"Short, marked weekly practice — around twenty minutes — reviewed at the start of the next lesson so nothing turns into a pile of unseen work."},
+  {n:"05",name:"Return to it later, deliberately",body:"Old topics are quietly mixed back into new lessons. Spaced revisiting is the difference between a topic understood in March and a topic still there in June."},
+  {n:"06",name:"Tell the parent the truth",body:"A short written note after every lesson: what we did, what went well, what is still shaky. No progress dashboards, no inflated scores."}
+];
+
+const COURSE_DATA = {
+  uk: {
+    eyebrow: "COURSES · UNITED KINGDOM",
+    heading: "11+, KS2, KS3 and GCSE maths.",
+    intro: "Lessons follow the National Curriculum and your child's exam board, at their pace. Every course below starts the same way: a free assessment, then a written plan you can actually read.",
+    quote: "\"Grade 5 in the mock, grade 8 in the real paper.\"",
+    quoteMeta: "Parent of a Year 11 student · Leeds · GCSE Higher, AQA",
+    list: [
+      {title:"11+ entrance", detail:"Years 4–6 · GL, CEM and independent-school papers · 12–18 months ideal lead time", body:"The 11+ rewards children who stay calm and read carefully — not the fastest arithmetic. We build both: the topic knowledge, then the timing strategy that stops good children losing easy marks in the last ten minutes.", covers:["· Multi-step word problems","· Fractions, ratio & percentages","· Non-verbal & spatial reasoning","· Timed past papers with review"],
+        more:{
+          summary:"A two-stage course. Stage one closes the arithmetic and reasoning gaps so no question type is unfamiliar. Stage two is almost entirely about the clock: timed sections, marked papers, and a written review of where the minutes went.",
+          stats:[{k:"Lesson length",v:"55 minutes"},{k:"Typical rhythm",v:"Two lessons a week"},{k:"Format",v:"1-to-1, or a group of up to four"},{k:"Ideal lead time",v:"12–18 months before the paper"},{k:"Homework",v:"~30 minutes, marked weekly"},{k:"Papers covered",v:"GL, CEM, ISEB and single-school"}],
+          modules:[
+            {n:"01",name:"Number fluency",body:"Times tables to instant recall, four operations with decimals, factors and multiples. Nothing on this list should need thinking time by the end."},
+            {n:"02",name:"Fractions, ratio and percentages",body:"The topic that decides most 11+ marks. Taught with bar models first so the child can see the quantity before they reach for a method."},
+            {n:"03",name:"Multi-step word problems",body:"Reading for the question, not the numbers. Underline, sketch, estimate, then solve — a routine your child can run under pressure."},
+            {n:"04",name:"Reasoning and spatial work",body:"Sequences, codes, nets, rotations and reflections, plus the non-verbal question types used by GL and independent papers."},
+            {n:"05",name:"Timed exam technique",body:"Section timing, skip-and-return rules, checking strategy, and how to handle the two questions nobody in the room can do."}
+          ],
+          outcomes:["Finishes the paper with time to check","Recognises every standard question type on sight","Shows working clearly enough to earn method marks","Walks into the exam hall having already sat eight full papers"],
+          mocks:[
+            {name:"Diagnostic paper",time:"45 min",when:"Week 1",note:"Sat cold, before teaching starts. Sets the plan."},
+            {name:"Topic mini-tests",time:"15 min each",when:"Fortnightly",note:"One theme, strict timing, marked in the lesson."},
+            {name:"Half paper — maths",time:"25 min",when:"Month 3 onward",note:"Builds the habit of pacing before full length."},
+            {name:"Full mock — GL style",time:"50 min",when:"Months 4, 7, 10",note:"Multiple choice, standard GL timing and answer sheet."},
+            {name:"Full mock — CEM style",time:"2 × 45 min",when:"Months 5, 8, 11",note:"Mixed sections with the short in-paper time calls CEM uses."},
+            {name:"Independent-school paper",time:"60 min",when:"Months 6, 9",note:"Written answers, full working, marked to school mark schemes."},
+            {name:"Exam-week rehearsal",time:"Full morning",when:"Final 3 weeks",note:"Back-to-back papers at the real start time, no pausing."}
+          ],
+          mocksNote:"Every timed paper comes back with a per-section time breakdown: where the minutes went, which questions were worth leaving, and the two topics to drill before the next one."
+        }},
+      {title:"KS2 & KS3", detail:"Years 3–9 · National Curriculum · SATs support available", body:"This is where most gaps are made and where they're cheapest to fix. We go back far enough to find solid ground, then move forward quickly — usually faster than parents expect, because the child stops guessing.", covers:["· Number sense & place value","· Fractions, decimals, ratio","· Early algebra & sequences","· Geometry, shape & measure"],
+        more:{
+          summary:"A gap-first course. The assessment finds the earliest shaky idea — often two or three years below current year group — and we rebuild from there while keeping pace with what school is teaching this term.",
+          stats:[{k:"Lesson length",v:"55 minutes"},{k:"Typical rhythm",v:"One or two lessons a week"},{k:"Format",v:"1-to-1, or a group of up to four"},{k:"School work",v:"Bring the class topic list"},{k:"Homework",v:"~20 minutes, marked weekly"},{k:"SATs",v:"Year 6 paper practice from January"}],
+          modules:[
+            {n:"01",name:"Place value and number sense",body:"Reading, comparing and estimating with whole numbers and decimals so answers get sense-checked automatically."},
+            {n:"02",name:"The four operations",body:"Written methods that survive pressure, plus mental strategies for the calculations that shouldn't need a method at all."},
+            {n:"03",name:"Fractions, decimals, percentages, ratio",body:"One idea shown four ways, until moving between them is obvious rather than memorised."},
+            {n:"04",name:"Into algebra",body:"Sequences, expressions, substitution and solving — the KS3 bridge most children cross too quickly."},
+            {n:"05",name:"Geometry, measure and data",body:"Angles, area, volume, coordinates, averages and graphs, with the units questions that quietly lose marks."}
+          ],
+          outcomes:["Stops guessing and starts explaining","Keeps up with class teaching instead of catching up","Written methods that hold under exam conditions","Ready for GCSE content without a rebuild in Year 10"],
+          mocks:[],mocksNote:""
+        }},
+      {title:"GCSE — all boards", detail:"Years 10–11 · AQA, Edexcel, OCR · Foundation & Higher · Retakes welcome", body:"Two years of content, one clear order. We work through topics by weight in the paper, then spend the final term on past papers and mark-scheme reading — because knowing the maths and knowing how it's marked are different skills.", covers:["· Algebra, graphs & functions","· Trigonometry & geometry","· Probability & statistics","· Past papers & exam technique"],
+        more:{
+          summary:"Topics are ordered by how many marks they carry on your child's board, not by the order of the textbook. From February of Year 11 the course turns into past papers, mark schemes and targeted repair of whatever the papers expose.",
+          stats:[{k:"Lesson length",v:"55 minutes"},{k:"Typical rhythm",v:"One or two lessons a week"},{k:"Format",v:"1-to-1, or a group of up to four"},{k:"Boards",v:"AQA, Edexcel, OCR"},{k:"Tiers",v:"Foundation and Higher"},{k:"Retakes",v:"November series supported"}],
+          modules:[
+            {n:"01",name:"Number and proportion",body:"Standard form, bounds, surds, compound measures, and the ratio questions that appear on every single paper."},
+            {n:"02",name:"Algebra",body:"Manipulation, quadratics, simultaneous equations, inequalities and iteration — the biggest mark block on both tiers."},
+            {n:"03",name:"Graphs and functions",body:"Straight lines, curves, transformations, gradients and areas under graphs, read as well as drawn."},
+            {n:"04",name:"Geometry and trigonometry",body:"Angle reasoning with written justification, circle theorems, Pythagoras, SOHCAHTOA, sine and cosine rules, vectors."},
+            {n:"05",name:"Probability and statistics",body:"Tree and Venn diagrams, sampling, averages from tables, and the interpretation questions examiners like."},
+            {n:"06",name:"Papers and technique",body:"Full past papers under time, self-marking against the real scheme, and a running list of repeat mistakes."}
+          ],
+          outcomes:["Knows which topics carry the marks on their board","Writes answers the mark scheme can reward","Sits at least six full past papers under timed conditions","Walks in with a checking routine, not hope"],
+          mocks:[],mocksNote:""
+        }}
+    ]
+  },
+  au: {
+    eyebrow: "COURSES · AUSTRALIA & NEW ZEALAND",
+    heading: "NAPLAN numeracy and Years 3–10 maths.",
+    intro: "Lessons are aligned to the Australian Curriculum and the New Zealand Curriculum Levels, in your child's own timezone — usually before school or early evening.",
+    quote: "\"NAPLAN stopped being a thing we dreaded in this house.\"",
+    quoteMeta: "Parent of a Year 5 student · Brisbane · NAPLAN numeracy",
+    list: [
+      {title:"NAPLAN numeracy", detail:"Years 3, 5, 7 and 9 · Calculator and non-calculator papers", body:"NAPLAN is as much a reading test as a maths test. We work through the question types, decide what to do first, and practise the pacing so nothing is left blank at the end.", covers:["· Question-type recognition","· Calculator & mental strategy","· Measurement & data","· Timed practice papers"],
+        more:{
+          summary:"Short course, narrow aim: make the paper familiar. We cover the question types band by band, then practise choosing what to do first so the easy marks are banked before the hard ones are attempted.",
+          stats:[{k:"Lesson length",v:"55 minutes"},{k:"Typical rhythm",v:"One or two lessons a week"},{k:"Format",v:"1-to-1, or a group of up to four"},{k:"Timing",v:"Booked in your local time"},{k:"Start point",v:"Term 3 of the prior year is ideal"},{k:"Papers",v:"Calculator and non-calculator"}],
+          modules:[
+            {n:"01",name:"Reading the question",body:"NAPLAN wording is deliberately dense. We practise stripping a question to what it actually asks before touching the numbers."},
+            {n:"02",name:"Number and algebra",body:"Place value, operations, fractions, patterns — the band descriptors your child's year is assessed against."},
+            {n:"03",name:"Measurement and space",body:"Units, area, volume, time, angles and location, including the diagram questions that look harder than they are."},
+            {n:"04",name:"Statistics and probability",body:"Reading tables and graphs, averages, chance language, and interpreting rather than just calculating."},
+            {n:"05",name:"Pacing and calculator use",body:"When to reach for the calculator, when it costs time, and how to leave nothing blank at the end."}
+          ],
+          outcomes:["No surprises in the question format","Finishes the paper","Sense-checks answers instead of guessing","Approaches the test without dread"],
+          mocks:[],mocksNote:""
+        }},
+      {title:"Primary core maths", detail:"Years 3–6 · Australian Curriculum · NZ Levels 2–4", body:"Place value, fractions and problem solving, taught with materials on screen so the ideas are visible before they become procedures. This is the stage where confidence is either built or quietly lost.", covers:["· Place value & number sense","· Fractions & decimals","· Measurement & geometry","· Word problems in context"],
+        more:{
+          summary:"Concrete before abstract. Ideas are built on screen with blocks, bars and number lines first, and only then written as a method — so the method has something to stand on.",
+          stats:[{k:"Lesson length",v:"55 minutes"},{k:"Typical rhythm",v:"One or two lessons a week"},{k:"Format",v:"1-to-1, or a group of up to four"},{k:"Curriculum",v:"Australian Curriculum · NZ Levels 2–4"},{k:"Homework",v:"~20 minutes, marked weekly"},{k:"Slots",v:"Before school or early evening"}],
+          modules:[
+            {n:"01",name:"Place value and number",body:"Whole numbers and decimals, comparing and rounding, and estimating well enough to spot a wrong answer."},
+            {n:"02",name:"Operations and fluency",body:"Written and mental strategies for all four operations, practised to the point of not needing thought."},
+            {n:"03",name:"Fractions and decimals",body:"Built on bar models and number lines, so equivalence is seen rather than memorised."},
+            {n:"04",name:"Measurement and geometry",body:"Length, area, volume, time, angles, shape and location, with the unit conversions that trip most children."},
+            {n:"05",name:"Problem solving",body:"Word problems in real contexts: what is being asked, what to ignore, and how to show the working."}
+          ],
+          outcomes:["Explains why a method works, not just the steps","Attempts unfamiliar problems instead of stalling","Enters secondary school without primary gaps","Enjoys the subject again"],
+          mocks:[],mocksNote:""
+        }},
+      {title:"Years 7–10", detail:"Junior secondary · Preparation for senior maths pathways", body:"Algebra, geometry and statistics — building the fluency senior maths will simply assume next year. We also fix the primary gaps that suddenly start costing marks at this level.", covers:["· Algebraic manipulation","· Linear relationships & graphs","· Geometry & trigonometry","· Statistics & probability"],
+        more:{
+          summary:"Two jobs at once: keep up with this term's class content, and quietly repair the primary-level gaps that start costing marks at this level. The plan says which is happening each week.",
+          stats:[{k:"Lesson length",v:"55 minutes"},{k:"Typical rhythm",v:"One or two lessons a week"},{k:"Format",v:"1-to-1, or a group of up to four"},{k:"Alignment",v:"School scope and sequence"},{k:"Assessment",v:"Support before school tests"},{k:"Looking ahead",v:"Senior pathway readiness"}],
+          modules:[
+            {n:"01",name:"Algebraic fluency",body:"Expanding, factorising, solving and rearranging until the algebra stops being the obstacle in every other topic."},
+            {n:"02",name:"Linear and non-linear relationships",body:"Gradient, intercept, simultaneous equations, quadratics and graph reading."},
+            {n:"03",name:"Geometry and trigonometry",body:"Angle reasoning with justification, Pythagoras, right-angled trigonometry, similarity and scale."},
+            {n:"04",name:"Measurement and proportion",body:"Rates, ratios, percentages, surface area and volume, in the multi-step form assessments use."},
+            {n:"05",name:"Statistics and probability",body:"Data displays, measures of centre and spread, and probability with and without replacement."}
+          ],
+          outcomes:["Algebra stops being the bottleneck","Handles multi-step unfamiliar questions","Prepared for a senior maths pathway with options open","Test results that match classroom understanding"],
+          mocks:[],mocksNote:""
+        }}
+    ]
+  }
+};
+
+const FAQ_DATA = [
+  {title:"Lessons", items:[
+    {q:"How do lessons actually run?", a:"A video call with a shared whiteboard. Your child writes as we go, and I can see their working in real time. Nothing needs installing beyond a browser."},
+    {q:"How long is a lesson?", a:"Fifty-five minutes. For younger children, two shorter sessions a week often works better than one long one — we'll decide after the assessment."},
+    {q:"Is there homework?", a:"A short practice set each week, around twenty minutes. It's marked and reviewed at the start of the next lesson, so it never turns into a pile of unseen work."},
+    {q:"Can parents sit in?", a:"Always welcome, especially for the first few lessons. Many parents prefer the written note instead — both work."}
+  ]},
+  {title:"Practicalities", items:[
+    {q:"What about the timezone difference?", a:"Slots are booked and shown in your local time. Australian and NZ families usually take early-morning or after-school slots in their own time."},
+    {q:"What if we need to miss a week?", a:"Rescheduled free with 24 hours' notice. School trips, illness and holidays are normal — we plan around them."},
+    {q:"Do you follow our school's curriculum?", a:"Yes. Bring your child's exam board, pacing guide or class topic list to the assessment and the plan is built around it."},
+    {q:"How long until we see a difference?", a:"Confidence usually shifts within three or four lessons. Marks follow later — typically one reporting cycle, sometimes two if there are older gaps to fill."}
+  ]},
+  {title:"Fees & booking", items:[
+    {q:"Why isn't there a price list?", a:"Fees depend on year group, timezone and how much ground there is to cover. I quote per family after the free assessment so you're not buying a package you don't need."},
+    {q:"How does billing work?", a:"Monthly in advance, in your own currency. No joining fee, no minimum term, and you can cancel with two weeks' notice."},
+    {q:"Do you teach siblings or pairs?", a:"Two children from the same family can share a plan at a reduced rate, and pairs of friends at the same level are welcome. Just ask when you enquire."}
+  ]},
+  {title:"Safeguarding", items:[
+    {q:"What checks do you hold?", a:"I teach from India, so a UK DBS check doesn't apply. What I do hold: fifteen years of teaching history, references from current families on request, and a parent contact on file for every student."},
+    {q:"Are lessons recorded?", a:"On request, and shared only with the parent on file. A parent contact is held for every student."},
+    {q:"How is my data handled?", a:"Only what's needed to teach and invoice: contact details, year group and lesson notes. Never shared or sold, and deleted on request."}
+  ]}
+];
+
+class Component extends DCLogic {
+  state = {
+    page: "home", region: "uk", filter: "all", limit: 9,
+    rating: 5, role: "parent", publish: "named", noteLen: 0,
+    slots: ["after"], sent: false, fbSent: false, openFaq: "Lessons|How do lessons actually run?",
+    openCourse: null, sending: false, formError: ""
+  };
+
+  componentDidMount() {
+    this._esc = (e) => { if (e.key === "Escape" && this.state.openCourse !== null) this.setState({ openCourse: null }); };
+    window.addEventListener("keydown", this._esc);
+  }
+
+  componentWillUnmount() { window.removeEventListener("keydown", this._esc); }
+
+  componentDidUpdate(prevProps, prevState) {
+    const prev = (prevState && prevState.page) || this._lastPage;
+    if (prev !== undefined && prev !== this.state.page) window.scrollTo({ top: 0 });
+    this._lastPage = this.state.page;
+    document.body.style.overflow = this.state.openCourse === null ? "" : "hidden";
+  }
+
+  collect(kind) {
+    const box = document.querySelector('[data-form="' + kind + '"]');
+    const out = {};
+    if (!box) return out;
+    box.querySelectorAll("input,select,textarea").forEach((el, i) => {
+      const lab = el.parentElement && el.parentElement.querySelector("div");
+      const key = ((lab && lab.textContent) || ("field " + i)).replace(/\s*\(.*?\)\s*/g, "").trim();
+      out[key] = el.value;
+    });
+    return out;
+  }
+
+  submit(kind) {
+    if (this.state.sending) return;
+    const f = this.collect(kind);
+    const st = this.state;
+    const name = f["YOUR NAME"] || f["FIRST NAME"] || "";
+    const email = f["EMAIL"] || "";
+    if (!name.trim()) return this.setState({ formError: "Please add your name so I know who I'm replying to." });
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) return this.setState({ formError: "That email doesn't look right — I need a working address to reply to." });
+
+    const payload = kind === "enquiry"
+      ? { type: "enquiry", fields: f, preferredSlots: st.slots, region: st.region }
+      : { type: "feedback", fields: f, rating: st.rating, role: st.role, permission: st.publish };
+    payload.page = typeof location !== "undefined" ? location.href : "";
+    payload.submittedAt = new Date().toISOString();
+
+    this.setState({ sending: true, formError: "" });
+    const done = () => this.setState(kind === "enquiry" ? { sent: true, sending: false } : { fbSent: true, sending: false });
+    const fail = () => this.setState({
+      sending: false,
+      formError: "Something went wrong sending that. Please email hello@suprithanalwad.in directly — I'll reply the same way."
+    });
+
+    if (!FORM_ENDPOINT) return done();
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then((r) => (r.ok ? done() : fail())).catch(fail);
+  }
+
+  renderVals() {
+    const st = this.state;
+    const set = (o) => this.setState(o);
+    const go = (p) => this.setState({ page: p, sent: false, fbSent: false, limit: 9, openCourse: null });
+
+    const selCard = "cursor:pointer;flex:1;border:1px solid #1d332f;background:#f2f5f3;border-radius:2px;padding:20px;display:flex;flex-direction:column;gap:6px";
+    const offCard = "cursor:pointer;flex:1;border:1px solid #ddd5c2;background:#fff;border-radius:2px;padding:20px;display:flex;flex-direction:column;gap:6px";
+    const onTab = "cursor:pointer;white-space:nowrap;flex:none;background:#1d332f;color:#f7f3e9;padding:10px 18px;border-radius:2px";
+    const offTab = "cursor:pointer;white-space:nowrap;flex:none;border:1px solid #ddd5c2;color:#4a5c57;padding:10px 18px;border-radius:2px";
+    const onChip = "cursor:pointer;white-space:nowrap;flex:none;background:#1d332f;color:#f7f3e9;padding:9px 16px;border-radius:2px";
+    const offChip = "cursor:pointer;white-space:nowrap;flex:none;border:1px solid #ddd5c2;color:#4a5c57;padding:9px 16px;border-radius:2px";
+    const onPill = "cursor:pointer;white-space:nowrap;flex:none;border:1px solid #1d332f;background:#f2f5f3;color:#1d332f;padding:9px 15px;border-radius:2px";
+    const offPill = "cursor:pointer;white-space:nowrap;flex:none;border:1px solid #ddd5c2;color:#4a5c57;padding:9px 15px;border-radius:2px";
+
+    const note = { uk: "Showing reviews from UK families", au: "Showing reviews from Australian & New Zealand families" }[st.region];
+
+    const inFilter = (r) => {
+      if (st.filter === "all") return true;
+      if (st.filter === "uk") return r.region === "uk";
+      if (st.filter === "aunz") return r.region === "au" || r.region === "nz";
+      if (st.filter === "parents") return r.who === "parent";
+      if (st.filter === "students") return r.who === "student";
+      if (st.filter === "eleven" || st.filter === "sats" || st.filter === "ks3") return r.course === st.filter;
+      return true;
+    };
+    const matched = ALL_REVIEWS.filter(inFilter);
+    const shown = matched.slice(0, st.limit).map((r, i) => ({
+      quote: r.quote, meta: r.meta, stars: r.who === "student" ? "★★★★★ · STUDENT" : "★★★★★",
+      cardStyle: r.who === "student"
+        ? "background:#f2f5f3;border:1px solid #d8e0dc;padding:24px;display:flex;flex-direction:column;gap:12px"
+        : "background:#fff;border:1px solid #e4dccb;padding:24px;display:flex;flex-direction:column;gap:12px"
+    }));
+    const remaining = matched.length - shown.length;
+
+    const filters = [
+      { key: "all", label: "All reviews" },
+      { key: "eleven", label: "11+" }, { key: "sats", label: "SATs" }, { key: "ks3", label: "KS3" },
+      { key: "uk", label: "🇬🇧 UK" }, { key: "aunz", label: "🇦🇺 🇳🇿 AU / NZ" },
+      { key: "parents", label: "From parents" }, { key: "students", label: "From students" }
+    ].map((f) => ({
+      label: f.label, style: st.filter === f.key ? onChip : offChip,
+      click: () => set({ filter: f.key, limit: 9 })
+    }));
+
+    const starList = [1, 2, 3, 4, 5].map((n) => ({
+      click: () => set({ rating: n }),
+      style: "cursor:pointer;font-size:30px;line-height:1;color:" + (n <= st.rating ? "#a07b2e" : "#ddd5c2")
+    }));
+
+    const publishOpts = [
+      { key: "named", label: "Publish this on the Reviews page with my first name, city and my child's year group." },
+      { key: "anon", label: "Publish it anonymously instead (\"Parent, UK\")." },
+      { key: "private", label: "Keep this private — for Supritha's eyes only." }
+    ].map((p) => ({
+      label: p.label, click: () => set({ publish: p.key }),
+      mark: st.publish === p.key ? "✓" : "",
+      box: "flex:none;width:14px;height:14px;margin-top:2px;text-align:center;font:400 10px/12px 'IBM Plex Sans',sans-serif;border:1px solid " +
+        (st.publish === p.key ? "#1d332f;background:#1d332f;color:#fff" : "#c9bfa8;color:transparent")
+    }));
+
+    const slots = [
+      { key: "after", label: "Weekday after school" }, { key: "evening", label: "Weekday evening" },
+      { key: "weekend", label: "Weekend morning" }, { key: "flex", label: "Flexible" }
+    ].map((s) => ({
+      label: s.label, style: st.slots.indexOf(s.key) > -1 ? onPill : offPill,
+      click: () => set({ slots: st.slots.indexOf(s.key) > -1 ? st.slots.filter((k) => k !== s.key) : st.slots.concat([s.key]) })
+    }));
+
+    const faqGroups = FAQ_DATA.map((g) => ({
+      title: g.title,
+      items: g.items.map((it) => {
+        const id = g.title + "|" + it.q;
+        const open = st.openFaq === id;
+        return {
+          q: it.q, a: it.a, icon: open ? "−" : "+",
+          click: () => set({ openFaq: open ? "" : id }),
+          rowStyle: "cursor:pointer;border-bottom:1px solid #e4dccb;padding-bottom:16px;display:flex;flex-direction:column;gap:8px",
+          answerStyle: open
+            ? "font:400 13.5px/1.8 'IBM Plex Sans',sans-serif;color:#4a5c57;max-width:640px"
+            : "display:none"
+        };
+      })
+    }));
+
+    const cd = COURSE_DATA[st.region];
+    const courseList = cd.list.map((c, i) => Object.assign({}, c, {
+      open: () => set({ openCourse: i })
+    }));
+    const mc = st.openCourse === null ? null : cd.list[st.openCourse];
+    const mm = mc ? mc.more : null;
+
+    return {
+      courseApproach: TEACH_APPROACH,
+      modalOpen: !!mc,
+      closeCourse: () => set({ openCourse: null }),
+      modalTitle: mc ? mc.title : "",
+      modalDetail: mc ? mc.detail : "",
+      modalSummary: mm ? mm.summary : "",
+      modalStats: mm ? mm.stats : [],
+      modalModules: mm ? mm.modules : [],
+      modalOutcomes: mm ? mm.outcomes : [],
+      modalMocks: mm ? mm.mocks : [],
+      modalHasMocks: !!(mm && mm.mocks && mm.mocks.length),
+      modalMocksNote: mm ? mm.mocksNote : "",
+      bookFromModal: () => { set({ openCourse: null }); go("contact"); },
+
+      page: st.page, go,
+      isHome: st.page === "home", isAbout: st.page === "about", isCourses: st.page === "courses",
+      isReviews: st.page === "reviews", isFeedback: st.page === "feedback",
+      isPricing: st.page === "pricing", isContact: st.page === "contact", isFaq: st.page === "faq",
+      goHome: () => go("home"), goAbout: () => go("about"), goCourses: () => go("courses"),
+      goReviews: () => go("reviews"), goFeedback: () => go("feedback"),
+      goPricing: () => go("pricing"), goContact: () => go("contact"), goFaq: () => go("faq"),
+
+      isUK: st.region === "uk", isAU: st.region === "au",
+      pickUK: () => set({ region: "uk" }), pickAU: () => set({ region: "au" }),
+      cardUK: st.region === "uk" ? selCard : offCard,
+      cardAU: st.region === "au" ? selCard : offCard,
+      tabUK: st.region === "uk" ? onTab : offTab,
+      tabAU: st.region === "au" ? onTab : offTab,
+      reviewFilterNote: note,
+      homeReviews: HOME_REVIEWS[st.region],
+
+      courseEyebrow: cd.eyebrow, courseHeading: cd.heading, courseIntro: cd.intro,
+      courses: courseList, courseQuote: cd.quote, courseQuoteMeta: cd.quoteMeta,
+
+      filters, shownReviews: shown, hasMore: remaining > 0,
+      moreLabel: "Load " + remaining + " more reviews",
+      loadMore: () => set({ limit: st.limit + 6 }),
+      reviewCountNote: "Showing " + shown.length + " of " + matched.length + " reviews",
+
+      starList, publishOpts, slots,
+      roleParent: st.role === "parent"
+        ? "cursor:pointer;white-space:nowrap;flex:none;font:500 12.5px 'IBM Plex Sans',sans-serif;border:1px solid #1d332f;background:#f2f5f3;color:#1d332f;padding:10px 18px;border-radius:2px"
+        : "cursor:pointer;white-space:nowrap;flex:none;font:500 12.5px 'IBM Plex Sans',sans-serif;border:1px solid #ddd5c2;color:#4a5c57;padding:10px 18px;border-radius:2px",
+      roleStudent: st.role === "student"
+        ? "cursor:pointer;white-space:nowrap;flex:none;font:500 12.5px 'IBM Plex Sans',sans-serif;border:1px solid #1d332f;background:#f2f5f3;color:#1d332f;padding:10px 18px;border-radius:2px"
+        : "cursor:pointer;white-space:nowrap;flex:none;font:500 12.5px 'IBM Plex Sans',sans-serif;border:1px solid #ddd5c2;color:#4a5c57;padding:10px 18px;border-radius:2px",
+      pickParent: () => set({ role: "parent" }), pickStudent: () => set({ role: "student" }),
+      onNote: (e) => set({ noteLen: e.target.value.length }),
+      noteCount: st.noteLen + " / 600",
+
+      sendEnquiry: () => this.submit("enquiry"), sent: st.sent, notSent: !st.sent,
+      sendFeedback: () => this.submit("feedback"), fbSent: st.fbSent, notFbSent: !st.fbSent,
+      formError: st.formError, hasFormError: !!st.formError,
+      errorStyle: st.formError
+        ? "border:1px solid #c26a4a;background:#fdf1ec;color:#8f3f22;padding:12px 14px;font:400 12.5px/1.6 'IBM Plex Sans',sans-serif;border-radius:2px"
+        : "display:none",
+      sendingNote: st.sending ? "Sending…" : "",
+      faqGroups
+    };
+  }
+}
+
+</script>
+</body>
+</html>

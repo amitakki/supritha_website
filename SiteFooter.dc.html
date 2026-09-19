@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="background:#1d332f;color:#9db3ac">
+  <div style="max-width:1280px;margin:0 auto;padding:40px 56px;display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:8px;max-width:280px">
+      <div style="font:600 18px 'Source Serif 4',serif;color:#f7f3e9">Supritha Nalwad</div>
+      <div style="font:400 12.5px/1.7 'IBM Plex Sans',sans-serif">Online maths tutoring — one-to-one or in a small group — for primary and secondary students across the UK, Australia and New Zealand.</div>
+      <div style="font:400 12.5px 'IBM Plex Sans',sans-serif;color:#f7f3e9">hello@suprithanalwad.in</div>
+    </div>
+    <div style="display:flex;gap:56px;font:400 12.5px/2 'IBM Plex Sans',sans-serif;flex-wrap:wrap;white-space:nowrap">
+      <div style="display:flex;flex-direction:column">
+        <span style="color:#a07b2e;font-size:10px;letter-spacing:.16em;margin-bottom:6px">LEARN</span>
+        <span onClick="{{ goCourses }}" style="cursor:pointer">UK — 11+, KS2, KS3, GCSE</span>
+        <span onClick="{{ goCourses }}" style="cursor:pointer">Australia &amp; NZ</span>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <span style="color:#a07b2e;font-size:10px;letter-spacing:.16em;margin-bottom:6px">TRUST</span>
+        <span onClick="{{ goReviews }}" style="cursor:pointer">Reviews &amp; testimonials</span>
+        <span onClick="{{ goFeedback }}" style="cursor:pointer">Share your feedback</span>
+        <span onClick="{{ goAbout }}" style="cursor:pointer">About Supritha</span>
+        <span onClick="{{ goFaq }}" style="cursor:pointer">FAQ</span>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <span style="color:#a07b2e;font-size:10px;letter-spacing:.16em;margin-bottom:6px">START</span>
+        <span onClick="{{ goContact }}" style="cursor:pointer">Book a free assessment</span>
+        <span onClick="{{ goPricing }}" style="cursor:pointer">Request a quote</span>
+        <span onClick="{{ goContact }}" style="cursor:pointer">Contact</span>
+      </div>
+    </div>
+  </div>
+  <div style="background:#162825;color:#6f8681">
+    <div style="max-width:1280px;margin:0 auto;padding:16px 56px;display:flex;justify-content:space-between;gap:20px;font:400 11.5px 'IBM Plex Sans',sans-serif">
+      <span>suprithanalwad.in · Teaching online across UK, Australia &amp; New Zealand</span>
+      <span>© 2026 Supritha Nalwad</span>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:260},&quot;go&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(page: string) =&gt; void&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const go = this.props.go || (() => {});
+    return {
+      goCourses: () => go("courses"), goReviews: () => go("reviews"), goFeedback: () => go("feedback"),
+      goAbout: () => go("about"), goFaq: () => go("faq"), goContact: () => go("contact"),
+      goPricing: () => go("pricing")
+    };
+  }
+}
+
+</script>
+</body>
+</html>
